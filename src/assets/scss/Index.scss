@@ -222,6 +222,7 @@
   font-display: swap;
 }
 p,
+a,
 label,
 small,
 input,
@@ -237,8 +238,7 @@ h4,
 h5,
 h6,
 span,
-li,
-a {
+li {
   font-family: "poppins-semibold" !important;
 }
 p {
@@ -387,89 +387,6 @@ p {
 }
 /* ======================= End-Pagination ======================= */
 
-/* ======================= Start-loader ======================= */
-.loader {
-  border: 2px solid transparent;
-  border-radius: 50%;
-  border-top: 2px solid var(--tertiary);
-  border-bottom: 2px solid var(--tertiary);
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-}
-.loader2 {
-  border: 2px solid transparent;
-  border-radius: 50%;
-  border-top: 2px solid var(--tertiary);
-  border-bottom: 2px solid var(--tertiary);
-  width: 70px;
-  height: 70px;
-  animation: spins 2s linear infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes spins {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-/* ======================= End-loader ======================= */
-
-/* ======================= Start-Animatedcss ======================= */
-.tab input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-.tab__content {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.tab input:checked ~ .tab__content {
-  max-height: 100%;
-}
-.tab__label::after {
-  width: 1em;
-  height: 100%;
-  text-align: center;
-  transform: rotate(90deg);
-  transition: all 0.3s;
-}
-.tab input:checked + .tab__label::after {
-  transform: rotate(270deg);
-}
-.bg-glass-nav {
-  background: rgba(255, 255, 255, 0.09);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.2px);
-  border: 1px solid rgba(255, 255, 255, 0.13);
-}
-.drawer .navhide {
-  position: absolute;
-  right: -50%;
-  width: 50% !important;
-  transition: all 0.3s ease-in 0s;
-}
-.drawer .navview {
-  position: absolute;
-  right: 0%;
-  width: 100% !important;
-  transition: all 0.3s ease-in 0s;
-}
-/* ======================= End-Animatedcss ======================= */
-
 /* ======================= Start-Button ======================= */
 .primarybtn {
   background: transparent;
@@ -500,270 +417,46 @@ p {
 }
 /* ======================= End-Button ======================= */
 
-/* ======================= End-Admin ======================= */
-
-.w-side {
-  min-width: 17% !important;
-}
-.w-route {
-  width: 81.5% !important;
-  @media (max-width: 912px) and (min-width: 641px) {
-    width: 97% !important;
-    padding: 0px 8px;
-  }
-  @media (max-width: 640px) {
-    width: 94% !important;
-    padding: 0px 5px;
-  }
-}
-
-/* ======================= End-Admin ======================= */
-
-/* ======================= Start-Sidebar ======================= */
-
-.sidebar-logo {
-  width: 100px !important;
-  height: 100px !important;
-}
-.dot-dash {
-  width: 20px !important;
-  height: 20px !important;
-}
-.sidebar .activesidebar {
-  color: var(--gray);
-}
-.sidebar .active {
-  color: var(--white);
-  background: var(--primary);
-}
-
-/* ======================= End-Sidebar ======================= */
-
-/* ======================= Start-Header ======================= */
-
-.header-logo {
+/* ======================= Start-Navbar ======================= */
+.sidebar-icon {
   width: 40px !important;
   height: 40px !important;
-  @media (max-width: 912px) {
-    width: 50px !important;
+}
+.activetext {
+  color: var(--gray);
+}
+.navbar .active {
+  color: var(--primary2);
+}
+.nav-logo {
+  width: 100% !important;
+  height: 50px !important;
+  @media (min-width: 641px) and (max-width: 912px) {
+    height: 50px !important;
+  }
+  @media (max-width: 640px) {
     height: 50px !important;
   }
 }
-.border-h1 {
-  margin-top: 8px !important;
-  border-radius: 6px !important;
+.navbar .navhide {
+  position: absolute;
+  right: -50%;
+  width: 50% !important;
+  transition: all 0.3s ease-in 0s;
+}
+.navbar .navview {
+  position: absolute;
+  right: 0%;
   width: 100% !important;
-  @media (max-width: 912px) {
-    margin-top: 5px !important;
-    border-radius: 5px !important;
-  }
+  transition: all 0.3s ease-in 0s;
 }
-
-/* ======================= End-Header ======================= */
-
-/* ======================= Start-Table ======================= */
-table {
-  border-collapse: collapse;
-  width: 100%;
+.dropdown .dropbox{
+  display: none;
 }
-td {
-  border: 1px solid #ececec;
-  text-align: left;
-  padding: 8px;
+.dropdown:hover .dropbox{
+  display: block;
 }
-th {
-  background: var(--primary2);
-  border: 1px solid var(--gray);
-  text-align: left;
-  padding: 10px;
-  @media (max-width: 640px) {
-    padding: 8px;
-  }
+.dropmenu:hover{
+  background: #f4f5f6;
 }
-tr {
-  background: var(--white);
-}
-tr:nth-child(even):hover {
-  background: var(--tertiary);
-}
-.h-input {
-  height: 35px !important;
-}
-input:focus-visible {
-  outline: none;
-  border: 1px solid var(--primary) !important;
-}
-.side-scroll {
-  height: 82vh !important;
-  overflow-y: auto !important;
-}
-.cust-scroll {
-  height: 82vh !important;
-  overflow-y: auto !important;
-  @media (max-width: 641px) {
-    height: 76vh !important;
-  }
-}
-.side-input {
-  width: 95% !important;
-}
-.wid-sidebar {
-  width: 25% !important;
-  @media (max-width: 912px) and (min-width: 641px) {
-    width: 40% !important;
-  }
-  @media (max-width: 640px) {
-    width: 90% !important;
-  }
-}
-.pop-w {
-  width: 30% !important;
-  @media (max-width: 912px) and (min-width: 641px) {
-    width: 55% !important;
-  }
-  @media (max-width: 640px) {
-    width: 90% !important;
-  }
-}
-.close {
-  width: 20px !important;
-  height: 20px !important;
-}
-.border-images {
-  border: 1px dashed var(--gray);
-  height: 150px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  border-radius: 10px !important;
-}
-.img-input {
-  width: 100% !important;
-  height: 150px !important;
-  opacity: 0 !important;
-}
-.preview-img {
-  height: 145px !important;
-}
-.table-colsm {
-  min-width: 80px !important;
-  text-align: center !important;
-}
-.table-collg {
-  min-width: 150px !important;
-  text-align: center !important;
-}
-.table-w {
-  width: 100% !important;
-  overflow: auto !important;
-}
-.table-w::-webkit-scrollbar {
-  height: 6px !important;
-  background: #fafafa !important;
-  width: 4px !important;
-}
-.table-w::-webkit-scrollbar-thumb {
-  background: #d6d2d2;
-  border-radius: 5px !important;
-}
-.sm-border-none {
-  @media (max-width: 640px) {
-    border: none !important;
-  }
-}
-.table-img {
-  width: 100% !important;
-  height: 40px !important;
-  object-fit: contain !important;
-  @media (max-width: 640px) {
-    height: 50px !important;
-    object-fit: contain !important;
-  }
-}
-/* ======================= End-Table ======================= */
-
-/* ======================= Start-Login ======================= */
-.w-login {
-  width: 97% !important;
-}
-/* ======================= End-Login ======================= */
-
-/* ======================= Start-dashboard ======================= */
-
-.dash-img {
-  width: 100% !important;
-  height: 110px !important;
-}
-.dashsection-img {
-  width: 100% !important;
-  height: 160px !important;
-}
-.dash-patch {
-  border-radius: 0px 16px 0px 0px;
-}
-.dash-hr {
-  border: none;
-  height: 3px;
-  background: var(--primary);
-  margin: 0px;
-}
-.bottom-btn {
-  width: 50px;
-  height: 50px;
-}
-.bord-top {
-  border-top: 3px solid;
-  border-image: linear-gradient(to right, #f1f5f7, var(--primary2), #f1f5f7) 1 0
-    0 0;
-}
-.circle-top {
-  clip-path: circle(50% at 50% 50%);
-  border-top: 6px solid var(--primary2);
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin-top: -43px;
-  background: var(--white);
-}
-.social-icon {
-  width: 25px !important;
-  height: 25px !important;
-}
-.tab-primary {
-  margin-bottom: -1px !important;
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(0.25turn, #f1f5f7, var(--primary2), #f1f5f7);
-  border-image-slice: 1;
-}
-.bill-img {
-  width: 100% !important;
-  height: 80px !important;
-  @media (max-width: 640px) {
-    height: 60px !important;
-  }
-}
-
-/* ======================= End-dashboard ======================= */
-
-/* ======================= Start-Nodata ======================= */
-
-.nodata-img {
-  width: 180px !important;
-  height: 180px !important;
-  @media (max-width: 640px) {
-    width: 90px !important;
-    height: 90px !important;
-  }
-}
-.setting-scroll {
-  @media (max-width: 640px) {
-    min-width: 100% !important;
-    overflow-x: auto !important;
-    border: none !important;
-  }
-}
-
-/* ======================= End-Nodata ======================= */
+/* ======================= End-Navbar ======================= */
