@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+// Pages
+import HeroSection from "./components/HeroSection";
 
 const Home = () => {
-  return (
-    <div className='bgprimary'>
-      fd
-    </div>
-  )
-}
 
-export default Home
+  return (
+    <div>
+      <HeroSection />
+    </div>
+  );
+};
+
+export default Home;

@@ -10,53 +10,26 @@ const Navbar = () => {
       icon: "home",
       name: "Home",
       route: "home",
-      dropdown: [],
-    },
-    {
-      icon: "user",
-      name: "Pages",
-      route: "",
-      dropdown: [
-        {
-          icon: "user",
-          name: "About Us",
-          route: "AboutUs",
-        },
-        {
-          icon: "grid",
-          name: "Services",
-          route: "Services",
-        },
-        {
-          icon: "plus",
-          name: "Teams",
-          route: "Teams",
-        },
-      ],
     },
     {
       icon: "settings",
-      name: "Sections",
-      route: "sections",
-      dropdown: [],
+      name: "Service",
+      route: "service",
+    },
+    {
+      icon: "user",
+      name: "About Us",
+      route: "about",
     },
     {
       icon: "folder",
       name: "Blogs",
       route: "blogs",
-      dropdown: [],
-    },
-    {
-      icon: "grid",
-      name: "Ecom",
-      route: "ecom",
-      dropdown: [],
     },
     {
       icon: "phone-call",
-      name: "Elearning",
-      route: "elearning",
-      dropdown: [],
+      name: "Connect",
+      route: "connect",
     },
   ];
 
@@ -87,115 +60,44 @@ const Navbar = () => {
             {NavMenu.map((e) => (
               <>
                 <div className="plpx20 prpx20 mbpx25">
-                  {e.dropdown.length > 0 ? (
-                    <>
-                      <div className="relative cursor-pointer dropdown">
-                        <div className="fsize14 textforth flex items-center gap-8 cursor-pointer">
-                          <FeatherIcon icon={e.icon} size={16} />
-                          <p className="my-0 mlpx6">{e.name}</p>
-                          <FeatherIcon
-                            icon="chevron-down"
-                            size="18"
-                            className="mlpx2"
-                          />
-                        </div>
-                        <div className="dropbox absolute top-0 left-0 z-99 w-max">
-                          <div className="bgwhite b-shadow border ptpx10 pbpx10 rounded-5 mtpx30 grid-cols-1">
-                            {e.dropdown.map((drop) => (
-                              <NavLink
-                                to={drop.route}
-                                activeClass="active"
-                                className="fsize14 activetext flex items-center gap-8 cursor-pointer px20 py5"
-                              >
-                                <FeatherIcon icon={drop.icon} size={14} />
-                                <p
-                                  className="my-0 mlpx5"
-                                  onClick={() => setsidebarshow(false)}
-                                >
-                                  {drop.name}
-                                </p>
-                              </NavLink>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <NavLink
-                        to={e.route}
-                        activeClass="active"
-                        className="fsize14 font-400 textforth flex items-center gap-8 cursor-pointer"
-                      >
-                        <FeatherIcon icon={e.icon} size={16} />
-                        <p
-                          className="my-0 mlpx6"
-                          onClick={() => setsidebarshow(false)}
-                        >
-                          {e.name}
-                        </p>
-                      </NavLink>
-                    </>
-                  )}
+                  <NavLink
+                    to={e.route}
+                    activeClass="active"
+                    className="fsize15 textforth flex items-center gap-8 cursor-pointer"
+                  >
+                    <FeatherIcon icon={e.icon} size={16} />
+                    <p className="my-0 mlpx6" onClick={() => setsidebarshow(false)}>
+                      {e.name}
+                    </p>
+                  </NavLink>
                 </div>
               </>
             ))}
           </div>
         </div>
       </div>
-      <div className="w-full py3 md-py2 sm-py1 bgwhite">
-        <div className="flex justify-between items-center container mx-auto">
+      <div className="w-full ptpx4 pbpx4 md-ptpx1 md-pbpx1 bgwhite sm-ptpx1 sm-pbpx1">
+        <div className="flex items-center justify-between container mx-auto">
           <div className="">
             <NavLink to="/">
               <img src={logo} alt="logo" className="object-contain nav-logo" />
             </NavLink>
           </div>
-          <div className="flex justify-center gap-5 items-center md-hidden sm-hidden">
+          <div className="flex justify-center items-center md-hidden sm-hidden">
             {NavMenu.map((e) => (
               <>
-                <div className="px10 sm-mbpx25">
-                  {e.dropdown.length > 0 ? (
-                    <>
-                      <div className="relative cursor-pointer dropdown">
-                        <div className="flex items-center cursor-pointer">
-                          <p className="fsize14 font-400 cursor-pointer textgray">
-                            {e.name}
-                          </p>
-                          <FeatherIcon
-                            icon="chevron-down"
-                            size="14"
-                            className="flex textgray"
-                          />
-                        </div>
-                        <div className="dropbox absolute top-0 left-0 z-99 w-max">
-                          <div className="bgwhite b-shadow border py8 rounded-5 mtpx30 grid-cols-1">
-                            {e.dropdown.map((drop) => (
-                              <NavLink
-                                to={drop.route}
-                                activeClass="active"
-                                className="fsize13 font-400 cursor-pointer dropmenu activetext px18 py6"
-                              >
-                                {drop.name}
-                              </NavLink>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <NavLink
-                        activeClass="active"
-                        className="fsize14 font-400 cursor-pointer mx10 activetext"
-                        to={e.route}
-                      >
-                        {e.name}
-                      </NavLink>
-                    </>
-                  )}
-                </div>
+                <NavLink
+                  activeClass="active"
+                  className="fsize15 font-500 mx20 activetext cursor-pointer"
+                  to={e.route}
+                >
+                  {e.name}
+                </NavLink>
               </>
             ))}
+          </div>
+          <div className="">
+            <button className="primarybtn border-0 fsize13 px18 py8 rounded-5">Get Started</button>
           </div>
           <div className="hidden md-block sm-block">
             <div className="bg-light-primary sidebar-icon justify-center items-center flex">
@@ -206,11 +108,6 @@ const Navbar = () => {
                 onClick={() => setsidebarshow(true)}
               />
             </div>
-          </div>
-          <div className="flex md-hidden sm-hidden">
-            <button className="cursor-pointer primarybtn px16 py6 rounded-5 fsize12">
-              Enquity Now
-            </button>
           </div>
         </div>
       </div>
