@@ -76,7 +76,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="w-full ptpx4 pbpx4 md-ptpx1 md-pbpx1 bgwhite sm-ptpx1 sm-pbpx1">
+      <div className="w-full py4 md-py2 sm-py1 bgwhite">
         <div className="flex items-center justify-between container mx-auto">
           <div className="">
             <NavLink to="/">
