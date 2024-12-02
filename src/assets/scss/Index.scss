@@ -240,7 +240,7 @@ input,
 }
 .css-b62m3t-container,
 text.CircularProgressbar-text {
-  font-family: "Ubuntu", "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px !important;
 }
 /* ======================= End-Font-Family ======================= */
@@ -371,17 +371,60 @@ p {
   backdrop-filter: blur(4.2px);
   border: 1px solid rgba(255, 255, 255, 0.13);
 }
-.drawer .navhide {
+.automation .navhide {
   position: absolute;
   right: -50%;
   width: 50% !important;
   transition: all 0.3s ease-in 0s;
 }
-.drawer .navview {
+.automation .navview {
   position: absolute;
   right: 0%;
   width: 100% !important;
   transition: all 0.3s ease-in 0s;
+}
+.wid-sidebar {
+  width: 25% !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    width: 40% !important;
+  }
+  @media (max-width: 640px) {
+    width: 90% !important;
+  }
+}
+.side-input {
+  width: 94% !important;
+}
+.close {
+  width: 20px !important;
+  height: 20px !important;
+}
+.border-images {
+  border: 1px dashed var(--gray);
+  height: 150px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 10px !important;
+}
+.img-input {
+  width: 100% !important;
+  height: 150px !important;
+  opacity: 0 !important;
+}
+.preview-img {
+  height: 145px !important;
+}
+.h-input {
+  height: 35px !important;
+}
+.select input:focus-visible {
+  outline: none;
+  border: 1px solid var(--primary) !important;
+}
+input:focus-visible {
+  outline: none;
+  border: 1px solid var(--primary2) !important;
 }
 /* ======================= End-Animatedcss ======================= */
 
