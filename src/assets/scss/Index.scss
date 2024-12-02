@@ -253,13 +253,30 @@ text.CircularProgressbar-text {
 
 /* ======================= Start-Maincss ======================= */
 
-// Font
+// Scroll
 body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   word-wrap: break-word !important;
+  width: 100% !important;
 }
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+html {
+  overflow: hidden;
+  @media (max-width: 640px) {
+    overflow: visible;
+  }
+}
+// Scroll
+
+// Font
 a {
   text-decoration: none !important;
 }

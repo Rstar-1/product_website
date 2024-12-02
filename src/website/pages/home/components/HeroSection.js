@@ -17,10 +17,10 @@ const HeroSection = () => {
   ];
 
   const [sectioncp, setsectioncp] = useState("section1");
-  const [layerone, setlayerone] = useState(1);
-  const [layertwo, setlayertwo] = useState(2);
-  const [layerthree, setlayerthree] = useState(3);
-  console.log(setsectioncp, setlayerone, setlayertwo, setlayerthree);
+  // const [layerone, setlayerone] = useState(1);
+  // const [layertwo, setlayertwo] = useState(2);
+  // const [layerthree, setlayerthree] = useState(3);
+  console.log(setsectioncp);
 
   return (
     <div className="relative bg-fa automation">
