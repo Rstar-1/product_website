@@ -11,7 +11,7 @@
   --secondary2: #ff4c51 !important;
   --tertiary: #2f2b24 !important;
   --forth: #0f172a !important;
-  --success: #4bb543 !important;
+  --success: #338a63 !important;
   --warning: #ff5722 !important;
   --danger: red !important;
   --info: #2196f3 !important;
@@ -241,7 +241,8 @@ input,
 .css-b62m3t-container,
 text.CircularProgressbar-text {
   font-family: "Poppins", "Ubuntu", sans-serif !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
+  color: var(--gray);
 }
 /* ======================= End-Font-Family ======================= */
 
@@ -423,7 +424,7 @@ p {
   height: 20px !important;
 }
 .border-images {
-  border: 1px dashed var(--gray);
+  border: 1px dashed var(--primary2);
   height: 150px !important;
   display: flex !important;
   justify-content: center !important;
@@ -441,6 +442,9 @@ p {
 .h-input {
   height: 35px !important;
 }
+.select {
+  width: 98.5% !important;
+}
 .select input:focus-visible {
   outline: none;
   border: 1px solid var(--primary) !important;
@@ -448,6 +452,43 @@ p {
 input:focus-visible {
   outline: none;
   border: 1px solid var(--primary2) !important;
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 16px;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.tog_slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 24px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+}
+.tog_slider::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.toggle-switch input:checked + .tog_slider {
+  background-color: var(--success);
+}
+.toggle-switch input:checked + .tog_slider::before {
+  transform: translateX(14px);
 }
 /* ======================= End-Animatedcss ======================= */
 
@@ -507,12 +548,12 @@ input:focus-visible {
 .navbar .active {
   color: var(--primary2);
 }
-.navbar .dropdown_out{
+.navbar .dropdown_out {
   opacity: 0;
   scale: 0.7;
   display: none;
 }
-.navbar .dropdown{
+.navbar .dropdown {
   opacity: 1;
   scale: 1;
   display: grid;
@@ -535,7 +576,416 @@ input:focus-visible {
   }
 }
 .bg_hero {
-  background: url('https://www.primefaces.org/cdn/primereact/images/layout/pattern.png'),
+  background: url("https://www.primefaces.org/cdn/primereact/images/layout/pattern.png"),
     radial-gradient(50% 50% at center top, #e9e7fd -50%, #fff 100%) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.doctor_img {
+  height: 500px !important;
+  @media (max-width: 640px) {
+    height: 280px !important;
+  }
+}
+.bg_doctor {
+  background: url("https://wphix.com/template/medixer-prv/medixer/assets/images/banner/01.jpg")
+    no-repeat;
+}
+.brand-img {
+  width: 100% !important;
+  height: 70px !important;
 }
 /* ======================= End-Components ======================= */
+
+
+// Section 4
+.leftabout4-img {
+  height: 490px !important;
+  filter: grayscale(100%);
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 380px !important;
+  }
+  @media (max-width: 640px) {
+    height: 280px !important;
+  }
+}
+.leftsecondabout4-img {
+  height: 280px !important;
+  filter: grayscale(100%);
+  margin-bottom: -10% !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 200px !important;
+  }
+  @media (max-width: 640px) {
+    height: 180px !important;
+  }
+}
+.rightabout4-img {
+  height: 490px !important;
+  filter: grayscale(100%);
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 380px !important;
+  }
+  @media (max-width: 640px) {
+    height: 280px !important;
+  }
+}
+.rightsecondabout4-img {
+  height: 280px !important;
+  filter: grayscale(100%);
+  margin-bottom: -10% !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 200px !important;
+  }
+  @media (max-width: 640px) {
+    height: 180px !important;
+  }
+}
+.line-about {
+  width: 14px !important;
+  border-radius: 30px !important;
+  height: 200px !important;
+  background: var(--primary2);
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 130px !important;
+  }
+  @media (max-width: 640px) {
+    height: 90px !important;
+  }
+}
+.border-about {
+  border-right: 2px solid var(--primary2);
+}
+.round-about {
+  width: 80px !important;
+  height: 80px !important;
+  background: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Section 4
+
+
+// Section 7
+.leftabout7-img {
+  height: 500px !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 340px !important;
+  }
+  @media (max-width: 640px) {
+    height: 280px !important;
+  }
+}
+.leftsecondabout7-img {
+  height: 100px;
+  width: 100px;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 90px;
+    width: 90px;
+  }
+  @media (max-width: 640px) {
+    height: 90px;
+    width: 90px;
+  }
+}
+.leftthirdabout7-img {
+  height: 50px;
+  width: 50px;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 50px;
+    width: 50px;
+  }
+  @media (max-width: 640px) {
+    height: 50px;
+    width: 50px;
+  }
+}
+.rightabout7-img {
+  height: 500px !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 340px !important;
+  }
+  @media (max-width: 640px) {
+    height: 280px !important;
+  }
+}
+.rightsecondabout7-img {
+  height: 100px;
+  width: 100px;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 90px;
+    width: 90px;
+  }
+  @media (max-width: 640px) {
+    height: 90px;
+    width: 90px;
+  }
+}
+.rightthirdabout7-img {
+  height: 50px;
+  width: 50px;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 50px;
+    width: 50px;
+  }
+  @media (max-width: 640px) {
+    height: 50px;
+    width: 50px;
+  }
+}
+.borderwhite {
+  border: 10px solid #fff !important;
+}
+// Section 7
+
+
+
+// Section2
+.service2-h {
+  height: 270px !important;
+  @media (max-width: 640px) {
+    height: 250px !important;
+  }
+}
+.service2-img {
+  width: 55px !important;
+  height: 55px !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  @media (max-width: 640px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+.pointer {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  margin-top: -20px !important;
+  background: var(--primary2);
+  @media (min-width: 641px) and (max-width: 912px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  @media (max-width: 640px) {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+// Section2
+
+
+// Section4
+.service4-img {
+  width: 100% !important;
+  height: 350px !important;
+  @media (max-width: 1224px) and (min-width: 913px) {
+    height: 290px !important;
+  }
+  @media (max-width: 912px) {
+    height: 100% !important;
+  }
+}
+.servicesecond4-img {
+  width: 40px !important;
+  height: 40px !important;
+}
+.service4-circle {
+  width: 270px !important;
+  height: 270px !important;
+  @media (max-width: 1224px) and (min-width: 913px) {
+    width: 230px !important;
+    height: 230px !important;
+  }
+  @media (max-width: 912px) and (min-width: 641px) {
+    width: 30% !important;
+    height: 180px !important;
+  }
+  @media (max-width: 640px) {
+    width: 100% !important;
+    height: 180px !important;
+  }
+}
+// Section4
+
+
+// Section5
+.service5-h {
+  height: 300px !important;
+  background: linear-gradient(#ffffff 50%, #684df4 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  transition: 0.5s;
+  @media (max-width: 640px) {
+    height: 250px !important;
+  }
+}
+.service5-h:hover:hover {
+  background-position: 0 100%;
+  color: #fff !important;
+}
+.service5-img {
+  width: 40px !important;
+  height: 40px !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  @media (max-width: 640px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+.service5-circle {
+  width: 65px;
+  height: 65px;
+}
+// Section5
+
+
+// Section2
+.blog2-img {
+  width: 100% !important;
+  height: 260px !important;
+}
+.minus-blog2 {
+  margin-top: -10% !important;
+}
+// Section2
+
+// Section1
+.patch1-img {
+  width: 100% !important;
+  height: 350px !important;
+  @media (min-width: 641px) and (max-width: 912px) {
+    height: 310px !important;
+  }
+  @media (max-width: 640px) {
+    height: 300px !important;
+  }
+}
+// Section1
+
+/* ======================= Start-Footer ======================= */
+.footerimg {
+  width: 100% !important;
+  height: 170px !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 120px !important;
+  }
+  @media (max-width: 640px) {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+.social-foot {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+.foot-hr {
+  width: 20% !important;
+  border: none;
+  height: 5px !important;
+  background: #fff !important;
+  margin-left: 0px !important;
+  margin-right: auto !important;
+}
+/* ======================= End-Footer ======================= */
+
+// Section 6
+.rightabout6-img {
+  height: 500px !important;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 380px !important;
+  }
+  @media (max-width: 640px) {
+    height: 280px !important;
+  }
+}
+.rightsecondabout6-img {
+  height: 100px;
+  width: 100px;
+  @media (max-width: 912px) and (min-width: 641px) {
+    height: 130px !important;
+  }
+  @media (max-width: 640px) {
+    height: 100px !important;
+  }
+}
+.about6-card {
+  width: 130px !important;
+  height: 130px !important;
+  background: var(--warning);
+  @media (max-width: 912px) and (min-width: 641px) {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  @media (max-width: 640px) {
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
+.tababoutbox {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+}
+.tababoutborderbox {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+// Section 6
+
+// Section 4
+.herosection4-img {
+  width: 100% !important;
+  height: 600px !important;
+  @media (min-width: 641px) and (max-width: 912px) {
+    height: 450px !important;
+  }
+  @media (max-width: 640px) {
+    height: 400px !important;
+  }
+}
+.video4-icon {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  background: var(--success);
+  @media (min-width: 641px) and (max-width: 912px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  @media (max-width: 640px) {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
+// Section 4
+
+.b-images{
+  height: 220px;
+}

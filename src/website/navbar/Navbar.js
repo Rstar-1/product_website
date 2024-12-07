@@ -15,25 +15,25 @@ const Navbar = () => {
     {
       icon: "home",
       name: "Home",
-      route: "home",
+      route: "builder",
       category: true,
     },
     {
       icon: "settings",
-      name: "Service",
-      route: "service",
+      name: "Page 1",
+      route: "page1",
       category: true,
     },
     {
       icon: "user",
-      name: "About Us",
-      route: "about",
+      name: "Page 2",
+      route: "page2",
       category: true,
     },
     {
       icon: "folder",
-      name: "Connect",
-      route: "connect",
+      name: "Page 3",
+      route: "page3",
       category: true,
     },
   ];
@@ -193,9 +193,11 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex md-hidden sm-hidden">
-            <button className="primarybtn border-0 fsize13 px18 py8 rounded-5">
-              Get Started
-            </button>
+            <NavLink to="/ideas">
+              <button className="primarybtn border-0 fsize13 px18 py8 rounded-5">
+                Get Started
+              </button>
+            </NavLink>
           </div>
           <div className="hidden md-block sm-block">
             <div className="bgprimary p6 justify-center items-center flex rounded-5">

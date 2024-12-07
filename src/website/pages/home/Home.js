@@ -9,20 +9,47 @@ import CardSection2 from "./components/CardSection2";
 import CardSection3 from "./components/CardSection3";
 import Blogs from "./components/Blogs";
 import ConnectSection from "./components/ConnectSection";
+import Brand from "./components/Brand";
+import Brand2 from "./components/Brand2";
+import Patch from "./components/Patch";
+import AboutSection3 from "./components/AboutSection3";
+import HeroSection3 from "./components/HeroSection3";
 
 const Home = () => {
 
   return (
     <div className="">
-      <HeroSection />
-      <HeroSection2 />
-      <AboutSection />
-      <AboutSection2 />
-      <CardSection />
-      <CardSection2 />
-      <CardSection3 />
-      <Blogs />
-      <ConnectSection />
+      {window.location.pathname === "/page1" ? (
+        <>
+          <HeroSection />
+          <CardSection />
+          <AboutSection />
+          <CardSection3 />
+          <Patch />
+          <Blogs />
+          <Brand />
+        </>
+      ) : null}
+      {window.location.pathname === "/page2" ? (
+        <>
+          <HeroSection2 />
+          <AboutSection2 />
+          <Brand2 />
+          <AboutSection3 />
+          <CardSection2 />
+          <Blogs />
+        </>
+      ) : null}
+      {window.location.pathname === "/page3" ? (
+        <>
+          <HeroSection3 />
+          <AboutSection />
+          <CardSection3 />
+          <AboutSection3 />
+          <Blogs />
+          <Brand />
+        </>
+      ) : null}
     </div>
   );
 };

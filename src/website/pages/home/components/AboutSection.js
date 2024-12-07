@@ -1,320 +1,94 @@
-import React, { useState } from "react";
-import Select from "react-select";
+import React from "react";
 import FeatherIcon from "feather-icons-react";
 
 const AboutSection = () => {
-  // Add Edit Status Delete Popup
-  const [editshow, seteditshow] = useState(false);
-  const [cmsshow, setcmsshow] = useState(false);
-  // Add Edit Status Delete Popup
-
-  const options = [
-    { value: "Team", label: "Team" },
-    { value: "Service", label: "Service" },
-    { value: "Gallery", label: "Gallery" },
-    { value: "Client", label: "Client" },
-    { value: "Faq", label: "Faq" },
-    { value: "Event", label: "Event" },
-  ];
-
-  const Textcms = [
-    {
-      cmsdata: "Know More",
-      sectionname: "HerSection",
-      sectionID: "HR1000",
-    },
-    {
-      cmsdata: "Designing a Better world",
-      sectionname: "HerSection",
-      sectionID: "HR1001",
-    },
-    {
-      cmsdata: "and Care",
-      sectionname: "HerSection",
-      sectionID: "HR1002",
-    },
-    {
-      cmsdata:
-        "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development to fill dummy or placeholder text commonly used in graphic design, publishing, empty spaces in a layout that do not yet have content.",
-      sectionname: "HerSection",
-      sectionID: "HR1003",
-    },
-    {
-      cmsdata: "Connect Us",
-      sectionname: "HerSection",
-      sectionID: "HR1004",
-    },
-    {
-      cmsdata: "Know More",
-      sectionname: "HerSection",
-      sectionID: "HR1005",
-    },
-  ];
-  const Imagecms = [
-    {
-      cmsdata:
-        "https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75",
-      sectionname: "HerSection",
-      sectionID: "HRI1000",
-    },
-  ];
-
-  const [sectioncp, setsectioncp] = useState("section1");
-  console.log(setsectioncp);
-
   return (
-    <div className="relative automation">
-      {/* // ========================== Automation ========================== // */}
-      <div className="absolute right-0 top-0 mx14 mtpx20">
-        <div
-          className="primarybtn rounded-5 p6"
-          title="Sections"
-          onClick={() => seteditshow(true)}
-        >
-          <FeatherIcon icon="grid" size="16" className="flex" />
-        </div>
-        <div
-          className="secondarybtn rounded-5 p6 mtpx8"
-          title="Edit"
-          onClick={() => setcmsshow(true)}
-        >
-          <FeatherIcon icon="edit-2" size="16" className="flex" />
-        </div>
-      </div>
-
-      {/* Edit */}
-      <div
-        className={
-          editshow
-            ? "fixed top-0 h-100 z-99 overflow-hidden navview"
-            : "fixed top-0 h-100 z-99 overflow-hidden navhide"
-        }
-      >
-        <div className="bgwhite wid-sidebar h-100 absolute right-0 top-0 b-shadow">
-          <div className="bgprimary p10">
-            <div className="flex items-center justify-between gap-4 plpx10 prpx10">
-              <p className="fsize15 textwhite mtpx4 mbpx4 cursor-pointer font-500">
-                Update Sections
-              </p>
-              <FeatherIcon
-                icon="x"
-                className="textwhite cursor-pointer"
-                size={17}
-                onClick={() => seteditshow(false)}
+    <div className="ptpx60 pbpx90 md-ptpx30 md-pbpx60 sm-ptpx20 sm-pbpx20">
+      <div className="container mx-auto">
+        <div className="flex sm-block w-full items-center">
+          <div className="w-50 sm-w-full prpx20 md-prpx9 sm-prpx1">
+            <div className="relative justify-end flex">
+              <img
+                src="https://linoor-nextjs.vercel.app/_next/static/media/featured-image-1.7be0781f.jpg"
+                className="w-70 md-w-80 sm-w-80 leftabout4-img object-cover rounded-10"
+                alt="leftabout4-img"
               />
-            </div>
-          </div>
-          <div className="px16">
-            <div className="mtpx15 grid-cols-2 gap-8">
-              <div className="">
-                <label className="fsize14 textgray">Section Name</label>
-                <div className="">
-                  <p className="fsize12 textprimary">HeroSection</p>
-                </div>
-              </div>
-              <div className="">
-                <label className="fsize14 textgray">Section ID</label>
-                <div className="">
-                  <p className="fsize12 textsuccess">HR1000</p>
-                </div>
-              </div>
-            </div>
-            <div className="mtpx15">
-              <label className="fsize14 textgray">Section Path</label>
-              <div className="mtpx8">
-                <input
-                  className="side-input bgwhite textgray h-input fsize14 rounded-5 plpx10 border-ec"
-                  placeholder="Enter Sub Title"
-                />
-              </div>
-            </div>
-            <div className="mtpx10">
-              <label className="fsize14 textgray">Layer 1</label>
-              <div className="mtpx8">
-                <input
-                  className="side-input bgwhite textgray h-input fsize14 rounded-5 plpx10 border-ec"
-                  placeholder="Enter Sub Title"
-                />
-              </div>
-            </div>
-            <div className="mtpx15">
-              <label className="fsize14 textgray">Layer 2</label>
-              <div className="mtpx8">
-                <Select
-                  options={options}
-                  className="select"
-                  placeholder="Enter Section Id"
-                  aria-label="sectionid"
-                />
-              </div>
-            </div>
-            <div className="mtpx15">
-              <label className="fsize14 textgray">Layer 3</label>
-              <div className="mtpx8">
-                <Select
-                  options={options}
-                  className="select"
-                  placeholder="Enter Section Id"
-                  aria-label="sectionid"
-                />
-              </div>
-            </div>
-            <div className="mtpx15">
-              <label className="fsize14 textgray">Background</label>
-              <div className="mtpx8">
-                <input
-                  className="side-input bgwhite textgray h-input fsize14 rounded-5 plpx10 border-ec"
-                  placeholder="Enter Sub Title"
-                />
-              </div>
-            </div>
-            <div className="mtpx20 flex justify-center">
-              <button
-                type="submit"
-                className="w-full border-0 ptpx10 pbpx10 md-ptpx6 md-pbpx6 sm-ptpx8 sm-pbpx8 fsize14 rounded-5 primarybtn"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Edit */}
-
-      {/* CMS */}
-      <div
-        className={
-          cmsshow
-            ? "fixed top-0 h-100 z-99 overflow-hidden navview"
-            : "fixed top-0 h-100 z-99 overflow-hidden navhide"
-        }
-      >
-        <div className="bgwhite wid-sidebar h-100 absolute right-0 top-0 b-shadow">
-          <div className="bgprimary p10">
-            <div className="flex items-center justify-between gap-4 plpx10 prpx10">
-              <p className="fsize15 textwhite mtpx4 mbpx4 cursor-pointer font-500">
-                CMS
-              </p>
-              <FeatherIcon
-                icon="x"
-                className="textwhite cursor-pointer"
-                size={17}
-                onClick={() => setcmsshow(false)}
-              />
-            </div>
-          </div>
-          <div className="px16">
-            <div className="mtpx15">
-              <div className="">
-                <label className="fsize14 textgray">Section Name</label>
-                <div className="">
-                  <p className="fsize12 textprimary">HeroSection</p>
-                </div>
-              </div>
-            </div>
-            <div className="mtpx15 grid-cols-1 gap-12">
-              <div className="bg-fa py8">
-                <div className="px8">
-                  <div className="flex items-center justify-between">
-                    <h4 className="fsize14 my1 tetdark font-500">
-                      CMS (HR1000)
-                    </h4>
-                    <div className="flex items-center gap-6">
-                      <div className="dot bgsuccess rounded-full"></div>
-                      <FeatherIcon
-                        icon="edit-3"
-                        size="13"
-                        className="flex textprimary"
-                      />
-                    </div>
-                  </div>
-                  <p className="fsize12 textgray">Know More</p>
-                </div>
-              </div>
-              <div className="bg-fa py8">
-                <div className="px8">
-                  <div className="flex items-center justify-between">
-                    <h4 className="fsize14 my1 tetdark font-500">
-                      CMS (HR1000)
-                    </h4>
-                    <div className="flex items-center gap-6">
-                      <div className="dot bgsuccess rounded-full"></div>
-                      <FeatherIcon
-                        icon="edit-3"
-                        size="13"
-                        className="flex textprimary"
-                      />
-                    </div>
-                  </div>
-                  <p className="fsize12 textgray">Know More</p>
-                </div>
-              </div>
-            </div>
-            <div className="mtpx20 flex justify-center">
-              <button
-                type="submit"
-                className="w-full border-0 ptpx10 pbpx10 md-ptpx6 md-pbpx6 sm-ptpx8 sm-pbpx8 fsize14 rounded-5 primarybtn"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* CMS */}
-
-      {/* // ========================== Automation ========================== // */}
-
-      {/* // ========================== Section 1 ========================== // */}
-      {sectioncp === "section1" ? (
-        <>
-          <div className="container mx-auto">
-            <div className="flex sm-flex-column-reverse items-center w-full py60 md-py35 sm-py30">
-              <div className="w-50 sm-w-full sm-mtpx20">
-                <div className="prpx20 sm-prpx1">
-                  <small className="fsize24 md-fsize22 sm-fsize17 font-500 textprimary">
-                    {Textcms?.find((item) => item?.sectionID === "HR1000")
-                      ?.cmsdata || null}
-                  </small>
-                  <h2 className="fsize46 md-fsize40 sm-fsize28 font-600 my1 textdark leading-h">
-                    {Textcms?.find((item) => item?.sectionID === "HR1001")
-                      ?.cmsdata || null}{" "}
-                    <span className="textprimary">
-                      {Textcms?.find((item) => item?.sectionID === "HR1002")
-                        ?.cmsdata || null}
-                    </span>
-                  </h2>
-                  <p className="fsize16 sm-fsize14 leading textgray font-400 mtpx12 sm-mtpx8">
-                    {Textcms?.find((item) => item?.sectionID === "HR1003")
-                      ?.cmsdata || null}
-                  </p>
-                  <div className="mtpx20 flex items-center flex-wrap">
-                    <button className="primarybtn border-0 fsize16 sm-fsize14 px25 py10 sm-px18 sm-py8 rounded-5">
-                      {Textcms?.find((item) => item?.sectionID === "HR1004")
-                        ?.cmsdata || null}
-                    </button>
-                    <button className="primary2btn border-0 fsize16 sm-fsize14 px25 py10 sm-px18 sm-py8 rounded-5 mlpx10">
-                      {Textcms?.find((item) => item?.sectionID === "HR1005")
-                        ?.cmsdata || null}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="w-50 sm-w-full plpx20 sm-plpx1">
+              <div className="absolute bottom-0 left-0">
                 <img
-                  src={
-                    Imagecms?.find((item) => item?.sectionID === "HRI1000")
-                      ?.cmsdata || null
-                  }
-                  alt="hero_img"
-                  className="w-full hero_img flex object-cover rounded-5"
+                  src="https://linoor-nextjs.vercel.app/_next/static/media/featured-image-2.ff901bda.jpg"
+                  className="w-90 leftsecondabout4-img object-cover rounded-10"
+                  alt="leftsecondabout4-img"
                 />
+              </div>
+              <div className="absolute top-0 left-0">
+                <div className="line-about"></div>
               </div>
             </div>
           </div>
-        </>
-      ) : null}
-      {/* // ========================== Section 1 ========================== // */}
+          <div className="w-50 sm-w-full plpx20 md-plpx1 sm-plpx1 sm-mtpx50">
+            <h4 className="fsize35 md-fsize23 sm-fsize21 mtpx1 mbpx1 textdark">
+              WE’RE THE BEST AGENCY IN DOWNTOWN
+            </h4>
+            <h6 className="fsize18 md-fsize16 sm-fsize14 mtpx6 mbpx1 textprimary font-500">
+              WE ARE COMMITTED TO PROVIDING OUR CUSTOMERS SERVICE WHILE OFFERING
+              OUR EMPLOYEES THE BEST TRAINING.
+            </h6>
+            <p className="mtpx17 sm-mtpx10 fsize16 sm-fsize13 md-fsize14 textgray">
+              We spot, invest, and nurture passionate founders obsessed with
+              solving the challenges of Indian consumers and businesses.
+            </p>
+            <div className="mtpx20 md-mtpx15 flex items-center">
+              <div className="grid-cols-1 w-80 md-w-70 sm-w-70 border-about md-prpx7">
+                <div className="flex items-center md-items-start sm-items-start">
+                  <FeatherIcon
+                    icon="check"
+                    size="17"
+                    className="textprimary flex md-mtpx5"
+                  />
+                  <p className="fsize14 mlpx10 sm-fsize12 md-fsize13 textdark">
+                    Suspe ndisse suscipit sagittis leo.
+                  </p>
+                </div>
+                <div className="flex items-center md-items-start sm-items-start mtpx3">
+                  <FeatherIcon
+                    icon="check"
+                    size="17"
+                    className="textprimary flex md-mtpx5"
+                  />
+                  <p className="fsize14 mlpx10 sm-fsize12 md-fsize13 textdark">
+                    Entum estibulum dignissim posuere.
+                  </p>
+                </div>
+                <div className="flex items-center md-items-start sm-items-start mtpx3">
+                  <FeatherIcon
+                    icon="check"
+                    size="17"
+                    className="textprimary flex md-mtpx5"
+                  />
+                  <p className="fsize14 mlpx10 sm-fsize12 md-fsize13 textdark">
+                    If you are going to use a passage.
+                  </p>
+                </div>
+              </div>
+              <div className="w-20 md-w-30 sm-w-30 flex justify-end">
+                <div className="round-about rounded-full text-center">
+                  <div>
+                    <h5 className="mtpx1 mbpx1 fsize16 sm-fsize14 textwhite">
+                      Since
+                    </h5>
+                    <small className="textwhite font-500 fsize14 sm-fsize12">
+                      2000
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button className="border-0 cursor-pointer font-500 textwhite rounded-5 ptpx12 pbpx12 md-ptpx8 md-pbpx8 sm-ptpx6 sm-pbpx6 md-plpx20 md-prpx20 sm-plpx16 sm-prpx16 plpx35 prpx35 mtpx20 sm-mtpx14 fsize16 sm-fsize13 bgprimary">
+              Know More
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
