@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Select from "react-select";
 import FeatherIcon from "feather-icons-react";
 
@@ -12,8 +12,8 @@ const Ideas = () => {
   return (
     <div className="relative bg_hero">
       <div className="container mx-auto">
-        <div className="block items-start w-full py50 md-py35 sm-py30">
-          <div className="w-70 sm-w-full  prpx24">
+        <div className="grid-cols-2 items-start w-full py50 md-py35 sm-py30">
+          <div className="prpx24 mtpx10">
             <small className="fsize24 md-fsize22 sm-fsize17 font-500 textprimary">
               Step 1
             </small>
@@ -26,7 +26,7 @@ const Ideas = () => {
               graphic design, publishing, and web in graphic design, publishing.
             </p>
           </div>
-          <div className="w-full mtpx20">
+          <div className="">
             <div className="bgwhite b-shadow p20 rounded-10">
               <div className="w-full">
                 <label className="fsize14 textgray">Company Logo</label>
@@ -53,7 +53,7 @@ const Ideas = () => {
                   />
                 </div>
               </div>
-              <div className="grid-cols-4 gap-4 mtpx20">
+              <div className="grid-cols-2 gap-4 mtpx20">
                 <div className="">
                   <label className="fsize14 textgray">Company Name</label>
                   <div className="mtpx8">
@@ -72,7 +72,7 @@ const Ideas = () => {
                     />
                   </div>
                 </div>
-                <div className="">
+                <div className="mtpx12">
                   <label className="fsize14 textgray">Email ID</label>
                   <div className="mtpx8">
                     <input
@@ -81,7 +81,7 @@ const Ideas = () => {
                     />
                   </div>
                 </div>
-                <div className="">
+                <div className="mtpx12">
                   <label className="fsize14 textgray">Live Link</label>
                   <div className="mtpx8">
                     <input
@@ -140,7 +140,7 @@ const Ideas = () => {
                   </div>
                 </div>
               </div>
-              <div className="grid-cols-4 gap-12 mtpx20">
+              <div className="grid-cols-2 gap-12 mtpx20">
                 <div className="flex items-center justify-between bg-fa py8 px10 rounded-5">
                   <p className="fsize14 textgray">Digital Card</p>
                   <label class="toggle-switch flex">

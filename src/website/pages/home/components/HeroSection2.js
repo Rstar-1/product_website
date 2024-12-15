@@ -34,17 +34,17 @@ const HeroSection2 = () => {
       sectionID: "HR1005",
     },
   ];
-  const Imagecms = [
+  const Imagecms = [  
     {
       cmsdata:
-        "https://wphix.com/template/medixer-prv/medixer/assets/images/ilustration/ilustration-1.png",
+        "https://nischinto-html.netlify.app/nischinto/assets/img/hero-img2.png",
       sectionname: "HerSection",
       sectionID: "HRI1000",
     },
   ];
 
   return (
-    <div className="relative automation bg_doctor">
+    <div className="relative automation bg_hero">
       <div className="container mx-auto">
         <div className="flex sm-flex-column-reverse items-center w-full ptpx50 md-ptpx35 sm-ptpx30 sm-pbpx20">
           <div className="w-50 sm-w-full sm-mtpx20">

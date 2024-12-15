@@ -33,11 +33,11 @@ const Home = () => {
       {window.location.pathname === "/page2" ? (
         <>
           <HeroSection2 />
-          <AboutSection2 />
-          <Brand2 />
           <AboutSection3 />
-          <CardSection2 />
+          <Brand2 />
+          <AboutSection2 />
           <Blogs />
+          <CardSection2 />
         </>
       ) : null}
       {window.location.pathname === "/page3" ? (

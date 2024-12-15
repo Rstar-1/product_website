@@ -17,7 +17,7 @@ const AboutSection3 = () => {
     },
   ];
   return (
-    <div className="ptpx60 pbpx70 md-ptpx30 md-pbpx40 bg-fa sm-ptpx20 sm-pbpx20">
+    <div className="ptpx60 pbpx70 md-ptpx30 md-pbpx40 sm-ptpx20 sm-pbpx20">
       <div className="container mx-auto">
         <div className="flex sm-flex-column-reverse w-full items-center">
           <div className="w-50 sm-w-full sm-mtpx30 prpx20 md-prpx9 sm-prpx1">
